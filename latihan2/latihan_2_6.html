@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div dan span</title>
+    <link rel="icon" href="gambar/icon.png" type="img/png" sizes="16x16">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="header">
+        <h1>Peta Gambar</h1>
+    </div>
+    <div id="main">
+        <div id="link">
+            <ul>
+                <li><a href="#">London</a></li>
+                <li><a href="#">Paris</a></li>
+                <li><a href="#">Tokyo</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <p>Tag HTML <code>&lt;map&gt;</code> mendefinisikan peta gambar. Peta gambar adalah gambar dengan area yang dapat diklik. Area ditentukan dengan satu atau lebih tag <code>&lt;area&gt;</code>.</p>
+
+            <img src="gambar/workplace.jpg" alt="Workplace" usemap="#petagambar">
+
+            <map name="petagambar">
+                <area shape="rect" coords="24,44,270,350" alt="Computer" href="https://en.wikipedia.org/wiki/Computer">
+                <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://en.wikipedia.org/wiki/Telephone">
+                <area shape="circle" coords="337,300,44" alt="Coffee" href="https://en.wikipedia.org/wiki/Coffee">
+            </map>
+        </div>
+    </div>
+    <div id="footer">
+        <p><i>copyright@irhamnajibazimulqowi_2443110452025</i></p>
+    </div>
+</body>
+</html>

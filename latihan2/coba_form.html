@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form sederhana</title>
+    <link rel="icon" href="gambar/icon.png" type="img/png" sizes="16x16">
+</head>
+<body>
+    <form action="/action_page.php">
+        <label for="depan">Nama depan: </label><br>
+        <input type="text" id="depan" name="i_name" value="Budi"><br>
+        <label for="n_Belakang">Nama belakang: </label><br>
+        <input type="text" id="n_belakang" name="i_belakang" value="Prawira"><br><br>
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+    <br>
+    
+    <!-- Form dengan method GET dan target _blank -->
+    <form action="/action_page.php" method="get" target="_blank">
+        <label for="depan">Nama Depan:</label><br>
+        <input type="text" id="depan" name="i_name" value="Budi"><br>
+        
+        <label for="n_belakang">Nama Belakang:</label><br>
+        <input type="text" id="n_belakang" name="i_belakang" value="Prawira"><br><br>
+
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+
+    <br>
+
+    <!-- Form dengan method POST dan target _self -->
+    <form action="/action_page.php" method="post" target="_self">
+        <label for="depan">Nama Depan:</label><br>
+        <input type="text" id="depan" name="i_name" value="Budi"><br>
+        
+        <label for="n_belakang">Nama Belakang:</label><br>
+        <input type="text" id="n_belakang" name="i_belakang" value="Prawira"><br><br>
+
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+    <p>Uji coba ini menunjukkan bahwa tombol <b>reset</b> mengembalikan nilai input ke kondisi awal, sedangkan tombol <b>kirim</b> mengirimkan data sesuai metode yang digunakan. 
+        Atribut <b>target</b> dengan nilai <i>_blank</i> membuka halaman hasil di tab baru, sementara <i>_self</i> tetap di tab yang sama. 
+        Metode <b>GET</b> mengirim data melalui URL yang terlihat, cocok untuk data non-rahasia, sedangkan <b>POST</b> lebih aman karena data tidak muncul di URL.</p>
+</body>
+</html>

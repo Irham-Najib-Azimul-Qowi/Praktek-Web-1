@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Beranda</title>
+    <meta name="author" content="Irham Najib Azimul Qowi">
+    <meta name="nim" content="244311045">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background: #ccc;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: auto;
+        }
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Judul Website</h2>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Gambar Pemandangan</h1>
+            
+            <img src="gambar/gambar.jpg" alt="pemandangan" width="30%" 
+                onclick="alert('Gambar 1 diklik!')" 
+                onmouseover="this.style.border='2px solid red'" 
+                onmouseout="this.style.border='none'">
+            <!-- Event: onclick (menampilkan alert saat diklik), onmouseover (menambahkan border merah), onmouseout (menghapus border) -->
+
+            <img src="gambar/gambar1.jpg" alt="pemandangan" width="30%" 
+                ondblclick="alert('Gambar 2 di-double click!')" 
+                onmousedown="console.log('Mouse ditekan di Gambar 2')" 
+                onmouseup="console.log('Mouse dilepas di Gambar 2')">
+            <!-- Event: ondblclick (menampilkan alert saat diklik dua kali), onmousedown (mencetak log saat mouse ditekan), onmouseup (mencetak log saat mouse dilepas) -->
+
+            <img src="gambar/gambar2.jpg" alt="pemandangan" width="30%" 
+                onmousemove="console.log('Mouse bergerak di Gambar 3')" 
+                onwheel="alert('Mouse wheel digunakan pada Gambar 3')">
+            <!-- Event: onmousemove (mencetak log saat mouse bergerak di atas gambar), onwheel (menampilkan alert saat mouse wheel digunakan) -->
+
+            <img src="gambar/gambar4.jpg" alt="pemandangan" width="30%" 
+                onclick="this.style.opacity='0.5'" 
+                ondblclick="this.style.opacity='1'">
+            <!-- Event: onclick (mengurangi opacity saat diklik), ondblclick (mengembalikan opacity saat diklik dua kali) -->
+
+            <img src="gambar/gambar5.jpg" alt="pemandangan" width="30%" 
+                onmouseover="this.style.transform='scale(1.2)'" 
+                onmouseout="this.style.transform='scale(1)'">
+            <!-- Event: onmouseover (memperbesar gambar saat mouse berada di atasnya), onmouseout (mengembalikan ukuran gambar ke semula saat mouse keluar) -->
+
+            <img src="gambar/gambar6.jpg" alt="pemandangan" width="30%" 
+                onmousedown="this.style.borderRadius='50%'" 
+                onmouseup="this.style.borderRadius='0%'">
+            <!-- Event: onmousedown (mengubah gambar menjadi lingkaran saat mouse ditekan), onmouseup (mengembalikan ke bentuk persegi saat mouse dilepas) -->
+
+        </article>
+    </section>
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>

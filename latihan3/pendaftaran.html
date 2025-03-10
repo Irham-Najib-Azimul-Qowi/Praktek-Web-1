@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Beranda</title>
+    <meta name="author" content="Irham Najib Azimul Qowi">
+    <meta name="nim" content="244311045">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        nav {
+            float: left;
+            width: 30%;
+            height: 600px;
+            background: #ccc;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: auto;
+        }
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        input[type="submit"] {
+            width: auto;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Judul Website</h2>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Form Penjadwal Pertemuan</h1>
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Informasi Pribadi</legend>
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" name="nama" required>
+
+                    <label for="telepon">No. Telepon:</label>
+                    <input type="tel" id="telepon" name="telepon" pattern="\d{4}-\d{6}" placeholder="1234-567890" required>
+
+                    <label for="email">Alamat Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="tanggal_lahir">Tanggal Lahir:</label>
+                    <input type="date" id="tanggal_lahir" name="tanggal_lahir" min="1987-01-01" max="1993-01-01" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Permintaan Pertemuan</legend>
+                    <label for="tujuan">Tujuan Pertemuan:</label>
+                    <input type="text" id="tujuan" name="tujuan" required>
+
+                    <label for="kepentingan">Tingkat Kepentingan Pertemuan:</label>
+                    <input type="range" id="kepentingan" name="kepentingan" min="0" max="10" step="1">
+
+                    <label for="tanggal">Tanggal:</label>
+                    <input type="date" id="tanggal" name="tanggal" required>
+
+                    <label for="waktu">Waktu:</label>
+                    <input type="time" id="waktu" name="waktu" min="17:00" max="21:00" required>
+                </fieldset>
+
+                <input type="submit" value="Submit">
+            </form>
+        </article>
+    </section>
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+    <script>
+        // Batasi input tanggal pertemuan agar tidak bisa memilih tanggal di bawah hari ini
+        document.getElementById("tanggal").min = new Date().toISOString().split("T")[0];
+        document.getElementById("waktu").addEventListener("input", function() {
+        let inputTime = this.value;
+        let minTime = "17:00";
+        let maxTime = "21:00"; 
+
+        if (inputTime < minTime) {
+            this.value = minTime; 
+        } else if (inputTime > maxTime) {
+            this.value = maxTime;
+        }
+    });
+    </script>
+
+</body>
+</html>

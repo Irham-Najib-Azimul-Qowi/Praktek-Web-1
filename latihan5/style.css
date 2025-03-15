@@ -1,0 +1,11 @@
+p.box {
+    color: rgb(5, 10, 109);
+    font-family: arial, verdana, Tahoma, Calibri;
+    font-size: medium;
+    font-style: oblique;
+    font-weight: bold
+}
+p#oho {
+    color: rgb(157, 34, 164);
+}
+/* komentar */

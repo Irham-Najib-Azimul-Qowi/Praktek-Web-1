@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator</title>
+    <style>
+        /* No 1: Selektor untuk semua elemen <p> di dalam elemen <div> */
+        div p {
+            color: red;
+        }
+        
+        /* No 2: Selektor untuk semua elemen <p> yang merupakan anak langsung dari elemen <div> */
+        div > p {
+            background-color: yellow;
+        }
+        
+        /* No 3: Selektor untuk elemen <p> yang berada langsung setelah elemen <div> */
+        div + p {
+            background-color: darkgray;
+        }
+        
+        /* No 4: Seharusnya tidak ada selektor 'divp', kemungkinan maksudnya adalah 'div p' */
+        div p {
+            color: cyan;
+        }
+        </style>
+        
+</head>
+<body>
+    <div>
+        <p>This is a paragraph. Terangkan kesimpulan tentang selektor No. 1 pada paragraf ini.</p>
+        <p>This is a paragraph. Terangkan kesimpulan tentang selektor No. 2 pada paragraf ini.</p>
+    </div>
+    <p>This is a paragraph. Terangkan kesimpulan tentang selektor No. 3 pada paragraf ini.</p>
+    <p>This is a paragraph. Terangkan kesimpulan tentang selektor No. 4 pada paragraf ini.</p>    
+</body>
+</html>

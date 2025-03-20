@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container-flex {
+            display: flex;
+            background-color: rgb(166, 221, 121);
+            /* flex-direction: row-reverse; */
+            /* flex-wrap: none; */
+            /* justify-content: center; */
+            align-items: center;
+            /* align-content: center; */
+            height: 300px;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        .container-flex > div {
+            background-color: aqua;
+                margin: 10px;
+                padding: 20px;
+                font-size: 30px;
+                border-radius: 20px;
+                /* height: 200px; */
+                text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Membuat Container Flex</h1>
+    <div class="container-flex">
+        <div style="order: 3; flex: 1 1 25%">1</div>
+        <div style="order: 4; flex: 1 1 25%">2</div>
+        <div style="order: 2; flex: 4 1 25%">3</div>
+        <div style="flex-shrink: 0; flex: 1 1 25%">4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex_Layout</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, Verdana, Tahoma;
+      }
+      .header {
+        background-color: rgb(103, 107, 101);
+        text-align: center;
+        color: white;
+        padding: 40px;
+      }
+      .navbar {
+        display: flex;
+        background-color: black;
+        padding: 10px;
+        justify-content: center; 
+      }
+      .navbar > a {
+        text-decoration: none;
+        color: aliceblue;
+        text-align: center;
+        padding: 15px;
+      }
+      .navbar>a:hover {
+        background-color: gray;
+        color: skyblue;
+        border-radius: 20px;
+      }
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: auto; 
+        min-height: 400px; 
+        flex: 1;
+      }
+      .sidebar {
+        flex: 30%;
+        background-color: lightblue;
+        padding: 20px;
+      }
+      .main {
+        flex: 70%;
+        background-color: blanchedalmond;
+        padding: 20px;
+      }
+      .footer {
+        background-color: antiquewhite;
+        padding: 20px;
+        text-align: center;
+      }
+      .gambar {
+        background-color: brown;
+        width: 130px;
+        padding: 10px;
+        height: 100px; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Selamat Datang di Flex-Layout</h1>
+      <p>Halaman ini didesain dengan Flex</p>
+    </div>
+    <div class="navbar">
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+    </div>
+    <div class="content">
+      <div class="sidebar">
+        <h2>Ini Sidebar</h2>
+        <h5>Gambar Artikel</h5>
+        <div class="gambar"></div>
+      </div>
+      <div class="main">
+        <h2>Judul Artikel</h2>
+        <h5>Tanggal Artikel</h5>
+        <div class="gambar"></div>
+      </div>
+    </div>
+    <div class="footer">
+      <h2>--Footer--</h2>
+    </div>
+  </body>
+</html>

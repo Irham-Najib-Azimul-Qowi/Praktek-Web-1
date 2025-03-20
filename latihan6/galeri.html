@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeri</title>
+    <style>
+      body {
+        background-color: beige;
+        min-height: 100vh;
+      }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+            background-color: rgb(204, 0, 0);
+            margin: 0px;
+            border-radius: 30px;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            width: 15rem;  /* Ganti 8 dengan nilai NRP terakhir Anda */
+            height: 15rem; /* Ganti 8 dengan nilai NRP terakhir Anda */
+            overflow: hidden;
+            border-radius: 100%;
+            border: 100px black;
+            margin: 20px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .teks {
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            height: 50px;
+            align-content: center;
+            border-radius: 30px;
+            /* margin: 10px; */
+            width: 75%;
+            margin: 10px auto;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="teks">My Waifu Photo Collection</div>
+    <div class="gallery"> <!-- Perbaikan: class "galeri" menjadi "gallery" -->
+      <div class="gallery-item"> <!-- Setiap gambar memiliki container sendiri -->
+        <img src="image/1.jpg" alt="Foto 1" />
+      </div>
+      <div class="gallery-item">
+        <img src="image/2.jpg" alt="Foto 2" />
+      </div>
+      <div class="gallery-item">
+        <img src="image/3.jpg" alt="Foto 3" />
+      </div>
+      <div class="gallery-item">
+        <img src="image/4.jpg" alt="Foto 4" />
+      </div>
+      <div class="gallery-item">
+        <img src="image/5.jpg" alt="Foto 5" />
+      </div>
+      <div class="gallery-item">
+        <img src="image/6.jpg" alt="Foto 6" />
+      </div>
+      <div class="gallery-item">
+        <img src="image/7.jpg" alt="Foto 7" />
+      </div>
+      <div class="gallery-item">
+        <img src="image/8.jpg" alt="Foto 8" />
+      </div>
+      <div class="gallery-item">
+        <img src="image/9.jpg" alt="Foto 9" />
+      </div>
+      <div class="gallery-item">
+        <img src="image/10.jpg" alt="Foto 10" />
+      </div>
+      <div class="gallery-item">
+        <img src="image/11.jpg" alt="Foto 11" />
+      </div>
+      <div class="gallery-item">
+        <img src="image/12.jpg" alt="Foto 12" />
+      </div>
+      <div class="gallery-item">
+        <img src="image/13.jpg" alt="Foto 13" />
+      </div>
+      <div class="gallery-item">
+        <img src="image/14.jpg" alt="Foto 14" />
+      </div>
+      <div class="gallery-item">
+        <img src="image/15.jpg" alt="Foto 15" />
+      </div>
+      <div class="gallery-item">
+        <img src="image/16.jpg" alt="Foto 16" />
+      </div>
+      <div class="gallery-item">
+        <img src="image/17.jpg" alt="Foto 17" />
+      </div>
+      <div class="gallery-item">
+        <img src="image/18.jpg" alt="Foto 18" />
+      </div>
+    </div>
+  </body>
+</html>

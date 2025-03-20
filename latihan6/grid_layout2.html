@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-gap: 50px;
+            background-color: #2196F3;
+            padding: 10px;
+            grid-template-columns: auto
+            auto auto auto;
+            }
+
+        .item1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            grid-column: 1 / 4;
+            }
+
+        .item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+            }
+
+        .kesimpulan {
+            text-align: justify; /* Rata kiri-kanan */
+            max-width: 600px; /* Batasi lebar agar pemusatan terlihat */
+            margin-left: auto; /* Posisi tengah horizontal */
+            margin-right: auto;
+            }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="kesimpulan">skenario 1: Properti grid-row pada .item1 mengatur rentang vertikal dalam grid dua kolom (auto auto). Dengan grid-row: 1 / 4, .item1 mendominasi tiga baris, mendorong item lain ke bawah, cocok untuk elemen utama yang menonjol. Pada grid-row: 2 / 4, .item1 bergeser ke baris tengah, memungkinkan item lain mengisi baris atas, mengubah alur tata letak. Sedangkan grid-row: 1 / 2 mempertahankan posisi awal tanpa dampak vertikal besar. Kesimpulannya, grid-row memberikan kontrol presisi atas posisi vertikal, memengaruhi distribusi item lain secara signifikan tergantung rentangnya.</div>
+        <div class="kesimpulan">skenario 2: Properti grid-column pada .item1 dalam grid empat kolom (70px 300px auto 40px) mengatur rentang horizontalnya. Dengan grid-column: 1 / 4, .item1 melebar hingga tiga kolom, menyisakan ruang sempit untuk item lain di baris 1. Pada grid-column: 2 / 4, .item1 bergeser ke kolom tengah, membebaskan kolom pertama untuk item lain. Sedangkan grid-column: 1 / 5 membuat .item1 mendominasi seluruh lebar grid, mendorong item lain ke baris bawah. Kesimpulannya, grid-column memungkinkan pengaturan lebar elemen yang presisi, memengaruhi alur dan distribusi item lain sesuai rentang yang dipilih.</div>
+    </div>
+</body>
+</html>

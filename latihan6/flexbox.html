@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Flex Box</title>
+    <style>
+        .wadah_flex {
+            display: flex;
+            background-color: aliceblue;
+            /* flex-direction: column;  */
+            /* flex-wrap: nowrap; */
+            /* flex-flow: row wrap; */
+            justify-content: end;
+        }
+        .wadah_flex > div {
+            /* display: flex; */
+            background-color:  blanchedalmond;
+            margin: 10px;
+            padding: 30px;
+            font-size: 30px;
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wadah_flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <!-- <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div> -->
+    </div>
+    <div>
+        <p>Kesimpulan skenario 1: dengan display: flex membuat iten angaka dalam div menjadi baris baru</p>
+        <p>Kesimpulan skenario 2: degan tambahan style pada skenario mengubah item item nya memilikibackground,margin  10px, padding 20px, </p>
+        <p>kesimpulan skenario 3: menambahkan flex-direction: flex yang mengubah tampilan item item menjadi kolom</p>
+        <p>kesimpulan skenario 4:  singkat saja Properti nowrap pada CSS (white-space: nowrap) mencegah teks membungkus ke baris baru, menjaga konten dalam satu baris. Cocok untuk menu atau label, tetapi perlu dikombinasikan dengan pengaturan overflow agar responsif dan rapi.</p>
+        <p>kesimpulan skenario 5: flex-flow: row wrap menyusun item flex secara horizontal (row) dan membungkus ke baris baru (wrap) jika ruang habis, cocok untuk tata letak responsif.</p>
+        <p>kesimpulan skenario 6: justify-content dalam CSS flexbox mengatur distribusi item di sepanjang sumbu utama (horizontal pada row, vertikal pada column). Nilai seperti flex-start (kiri/atas), flex-end (kanan/bawah), center (tengah), space-between (ruang merata antar item), dan space-around (ruang merata di sekitar item) menentukan posisi dan jarak. Singkatnya, ini mengontrol penyebaran item flex secara efisien dalam kontainer.</p>
+    </div>
+</body>
+</html>

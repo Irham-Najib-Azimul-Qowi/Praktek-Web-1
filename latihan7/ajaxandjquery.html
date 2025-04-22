@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pengertian ajax dan jquery</title>
+</head>
+<body>
+    <h3>pengertion ajax</h3>
+    <p>AJAX (Asynchronous JavaScript and XML) adalah teknik pengembangan web yang memungkinkan aplikasi web mengirim dan menerima data dari server secara asinkronus (di latar belakang) tanpa harus memuat ulang seluruh halaman web. Dengan AJAX, bagian tertentu dari halaman dapat diperbarui tanpa mengganggu pengalaman pengguna. Meskipun dinamakan "XML", format data yang digunakan saat ini lebih sering JSON, meskipun format lain seperti teks biasa atau HTML juga dapat digunakan. AJAX biasanya menggunakan objek XMLHttpRequest atau API fetch() untuk berkomunikasi dengan server.</p>
+    <h3>pengertion jquery</h3>
+    <p>jQuery adalah pustaka JavaScript yang cepat, ringkas, dan kaya fitur. jQuery menyederhanakan tugas-tugas seperti manipulasi DOM, penanganan event, animasi, dan AJAX dengan API yang mudah digunakan dan kompatibel di berbagai browser. jQuery sangat populer karena sintaksnya yang sederhana dan kemampuannya untuk menangani perbedaan perilaku browser.</p>
+    <h3>Cara Menggunakan AJAX dengan jQuery</h3>
+    <p>Untuk menggunakan AJAX dengan jQuery, Anda perlu: <br>
+
+        Sertakan pustaka jQuery di proyek Anda menggunakan CDN atau file lokal. <br>
+        Gunakan metode jQuery seperti $.ajax() untuk membuat permintaan ke server. <br>
+        Tangani respons dari server menggunakan callback seperti success atau error.</p>
+    <h3>Contoh Pemanfaatan jQuery Sederhana</h3>
+    <h4>Contoh Penggunaan jQuery AJAX</h4>
+    <button id="fetchData">Ambil Data</button>
+    <p id="result"></p>
+
+    <script>
+        $(document).ready(function() {
+            $('#fetchData').click(function() {
+                $.ajax({
+                    url: 'https://jsonplaceholder.typicode.com/todos/1',
+                    type: 'GET',
+                    success: function(data) {
+                        $('#result').text('Judul: ' + data.title);
+                    },
+                    error: function(error) {
+                        $('#result').text('Terjadi kesalahan: ' + error.statusText);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

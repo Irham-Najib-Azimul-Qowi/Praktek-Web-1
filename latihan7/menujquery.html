@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Menu</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .menu {
+            width: 200px;
+            font-family: Arial, sans-serif;
+        }
+        .menu li {
+            list-style: none;
+            padding: 10px;
+            background: #f0f0f0;
+            cursor: pointer;
+        }
+        .submenu {
+            display: none;
+            padding-left: 20px;
+        }
+        .submenu li {
+            background: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Menu dengan jQuery</h2>
+    <ul class="menu">
+        <li>File
+            <ul class="submenu">
+                <li>New</li>
+                <li>Open</li>
+                <li>Save</li>
+            </ul>
+        </li>
+        <li>Edit
+            <ul class="submenu">
+                <li>Cut</li>
+                <li>Copy</li>
+                <li>Paste</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        $(document).ready(function() {
+            $('.menu > li').hover(
+                function() {
+                    $(this).find('.submenu').slideDown();
+                },
+                function() {
+                    $(this).find('.submenu').slideUp();
+                }
+            );
+        });
+    </script>
+</body>
+</html>

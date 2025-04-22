@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download Dialog with Progress Bar</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <h2>Download Dialog dengan Progress Bar</h2>
+    <button id="startDownload">Mulai Download</button>
+
+    <div id="downloadDialog" title="Proses Download" style="display:none;">
+        <p>Mengunduh file...</p>
+        <div id="progressbar"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#progressbar').progressbar({
+                value: 0
+            });
+
+            $('#downloadDialog').dialog({
+                autoOpen: false,
+                modal: true,
+                buttons: {
+                    "Batal": function() {
+                        $(this).dialog("close");
+                        clearInterval(downloadInterval);
+                        $('#progressbar').progressbar("value", 0);
+                    }
+                }
+            });
+
+            let downloadInterval;
+            $('#startDownload').click(function() {
+                $('#downloadDialog').dialog('open');
+                let progress = 0;
+
+                downloadInterval = setInterval(function() {
+                    progress += 10;
+                    $('#progressbar').progressbar("value", progress);
+
+                    if (progress >= 100) {
+                        clearInterval(downloadInterval);
+                        $('#downloadDialog').dialog('close');
+                        alert('Download selesai!');
+                        $('#progressbar').progressbar("value", 0);
+                    }
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>

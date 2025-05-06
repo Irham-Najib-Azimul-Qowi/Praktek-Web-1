@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+        }
+        label, input, textarea {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Form Pendaftaran</h2>
+    <form action="proses_pendaftaran.php" method="POST">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label>Jenis Kelamin:</label>
+        <input type="radio" id="laki" name="gender" value="Laki-laki" required>
+        <label for="laki">Laki-laki</label>
+        <input type="radio" id="perempuan" name="gender" value="Perempuan">
+        <label for="perempuan">Perempuan</label><br>
+
+        <label for="pesan">Pesan:</label>
+        <textarea id="pesan" name="pesan" rows="4" required></textarea><br>
+
+        <input type="submit" value="Kirim">
+    </form>
+</body>
+</html>
